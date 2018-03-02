@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 const transactions = JSON.parse(fs.readFileSync('data.json', 'utf8'));
-
+let port = process.env.PORT || 3339;
 app.use('/chart', express.static(__dirname + '/node_modules/chart.js/dist/'));
 app.use('/js', express.static(__dirname + '/src/js/'));
 app.use('/css', express.static(__dirname + '/src/css/'));
@@ -28,6 +28,6 @@ app.get('/api/transactions/:startDate/:endDate', function (request, response) {
   }, 100);
 });
 
-app.listen(3339, function () {
-  console.log('Open http://localhost:3339 in your browser');
+app.listen(port, function () {
+  console.log(`Open http://localhost:${port} in your browser`);
 });
