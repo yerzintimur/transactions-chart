@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.container {
+    padding: 50px;
+    width: 400px;
+    margin: 0 auto;
+}
+.title {
+    margin: 0 0 20px 0;
+}
+.transactions-graph {
+    position: relative;
+}
+.loading {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .5);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loading.inactive {
+    display: none;
+}
+.controls {
+    margin: 16px 0 0 0;
+    display: flex;
+    align-items: stretch;
+}
+.btn-prev {
+    order: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.btn-next {
+    order: 2;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.current {
+    order: 1;
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #0684ff;
+    border-bottom: 1px solid #0684ff;
+}
+.btn {
+    background: #fff;
+    border: 1px solid #0684ff;
+    cursor: pointer;
+    outline: 0;
+    margin: 0;
+    padding: 5px;
+}
+.btn.disabled {
+    opacity: .3;
+    cursor: default;
+}
